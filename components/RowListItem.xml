@@ -1,0 +1,49 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<component name="RowListItem" extends="Group" >
+  <interface >
+    <field id="itemContent" type="node" onChange="showcontent"/>
+    <field id="focusPercent" type="float" onChange="focusPercentChanged"/>
+    <field id="width" type="float"/>
+    <field id="height" type="float"/>
+  </interface>
+
+  <script type="text/brightscript" uri="pkg:/components/RowListItem.brs"/>
+
+  <children>
+    <poster
+      loadDisplayMode="scaleToFit"
+      id="rowListPoster">
+      <rectangle
+        id="posterInfo"
+        visible="false"
+        color="0x160e17"
+        width="400"
+        height="540">
+        <label
+          id="rowListTitle"
+          width="350"
+          height="500"
+          translation="[30, 40]"
+          font="font:MediumBoldSystemFont"/>
+        <label
+          id="rowListSubitle"
+          translation="[30, 80]"
+          font="font:SmallSystemFont"/>
+        <label
+          id="rowListDescription"
+          width="350"
+          height="500"
+          translation="[30, 130]"
+          font="font:SmallestSystemFont"/>
+      </rectangle>
+    </poster>
+    <Rectangle
+        id="rowItemMask"
+        color="0x000000"
+        opacity="0.8"
+        width="960"
+        height="540"/>
+  </children>
+
+</component>

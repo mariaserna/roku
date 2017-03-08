@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="MainScene" extends="Scene">
+
+  <interface>
+    <field id="rowItemFocused" type="intarray" alwaysnotify="true" alias="myRowList.rowItemFocused"/>
+    <field id="rowItemSelected" type="intarray" alwaysnotify="true" alias="myRowList.rowItemSelected"/>
+  </interface>
+
+  <script type="text/brightscript" uri="pkg:/components/MainScene.brs"/>
+  <children>
+        <rectangle
+          color="0x160e17"
+          height="120"
+          width="1920">
+          <label
+            translation="[80, 50]"
+            font="font:LargeBoldSystemFont"
+            text="Test Application"/>
+          </rectangle>
+
+        <RowList
+          id="myRowList"
+          translation="[ 250, 160 ]"
+          itemComponentName="RowListItem"
+          numRows="3"
+          itemSize="[ 1420, 308 ]"
+          rowItemSize="[ [960, 540], [384, 216] ]"
+          rowHeights="[540, 216]"
+          rowItemSpacing="[ [20, 0] ]"
+          rowSpacings="[80, 80]"
+          showRowLabel="[ true ]"
+          rowLabelOffset="[ [0, 20] ]"
+          focusXOffset="[230, 0]"
+          drawFocusFeedback="true"
+          rowFocusAnimationStyle="fixedFocusWrap"/>
+        <Video
+          id="VideoItem"
+          width="1920"
+          height="1080"
+          visible="false"/>
+  </children>
+</component>
