@@ -1,51 +1,42 @@
-sub init()
+Sub init()
   m.itemposter = m.top.findNode("rowListPoster")
   m.itemtitle = m.top.findNode("rowListTitle")
-  m.itemsubtitle = m.top.findNode("rowListSubitle")
+  m.itemSubtitle = m.top.findNode("rowListSubitle")
   m.itemdescription = m.top.findNode("rowListDescription")
   m.posterInfo = m.top.findNode("posterInfo")
-
   m.itemposter.observeField("loadStatus", "loadedImages")
-  'm.itemposter.observeField("focusPercent", "onFocusedChild")
-
-  m.rowitemmask = m.top.findNode("rowItemMask")
-end sub
+  m.itemOpacity = 0.2
+end Sub
 
 
-sub loadedImages()
+Sub loadedImages()
   brokenImage = "https://cdn2.iconfinder.com/data/icons/antivirus-internet-security/33/broken_shortcut-128.png"
   if m.itemposter.loadStatus = "failed"
     m.itemposter.uri = brokenImage
   end if
-end sub
+end Sub
 
 
-sub showcontent()
+Sub showcontent()
 
   m.itemcontent = m.top.itemContent
-
   m.itemposter.uri = m.itemcontent.image
   m.itemtitle.text = m.itemcontent.title
   m.itemdescription.text = m.itemcontent.description
-  m.itemsubtitle.text = m.itemcontent.subtitle
+  m.itemSubtitle.text = m.itemcontent.Subtitle
   m.itemposter.width = m.top.width
   m.itemposter.height = m.top.height
 
-  if m.itemcontent.parentCategory = "Bonanza"
+  if m.top.rowIndex = 0
     m.posterInfo.visible = true
-  else
-    m.rowitemmask.visible = false
+    m.top.opacity = m.itemOpacity
   end if
 
-end sub
+end Sub
 
 
-sub focusPercentChanged()
-
-  if not m.itemcontent = invalid
-    if m.itemcontent.parentCategory = "Bonanza"
-      m.rowitemmask.opacity = 0.75 - (m.top.focusPercent * 0.75)
-    end if
+Sub focusPercentChanged()
+  if m.top.rowIndex = 0
+    m.top.opacity = m.itemOpacity + (m.top.focusPercent * 0.8)
   end if
-
-end sub
+end Sub

@@ -1,42 +1,36 @@
-sub init()
+Sub init()
   m.myrowlist = m.top.findNode("myRowList")
   m.video = m.top.findNode("VideoItem")
-
   'Observe when a row item is focused and selected
-
   m.dataTask = createObject("RoSGNode", "GetDataTask")
   m.dataTask.functionName = "initTask"
   m.dataTask.control = "RUN"
-  m.dataTask.observeField("responseAssocArray", "onLoadedData")
-  m.dataTask.observeField("responseVideoContent", "onLoadedVideoData")
-end sub
+  m.dataTask.observeField("responseContentNode", "onLoadedData")
+end Sub
 
 
 Sub onLoadedData()
-  '?"Loaded data "m.dataTask.responseAssocArray
-  m.myrowlist.content = m.dataTask.responseAssocArray
   m.myrowlist.setFocus(true)
-End Sub
-
-Sub onLoadedVideoData()
-  'Load first time video
-  SetCurrentVideo()
-
+  m.myrowlist.content = m.dataTask.responseContentNode
   m.top.observeField("rowItemFocused","SetCurrentVideo")
   m.top.observeField("rowItemSelected", "PlayCurrentVideo")
-End sub
+End Sub
 
 Sub SetCurrentVideo()
   itemFocused = m.myrowlist.rowItemFocused
-  ''?m.dataTask.responseVideoContent[itemFocused[0]][itemFocused[1]]
-
   videoContent = createObject("RoSGNode", "ContentNode")
-  videoContent.url = m.dataTask.responseVideoContent[itemFocused[0]][itemFocused[1]]
+  row = m.myrowlist.content.getChild(itemFocused[0])
   videoContent.streamformat = "hls"
+
+  if row <> invalid
+    item = row.getChild(itemFocused[1])
+  end if
+  if item <> invalid
+    videoContent.url = item.video
+  end if
+
   m.video.content = videoContent
   m.video.control = "prebuffer"
-  '?m.top.rowItemFocused
-
 End Sub
 
 Sub PlayCurrentVideo()

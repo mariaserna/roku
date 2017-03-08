@@ -6,6 +6,7 @@
     <field id="focusPercent" type="float" onChange="focusPercentChanged"/>
     <field id="width" type="float"/>
     <field id="height" type="float"/>
+    <field id="rowIndex" type="integer"/>
   </interface>
 
   <script type="text/brightscript" uri="pkg:/components/RowListItem.brs"/>
@@ -38,12 +39,6 @@
           font="font:SmallestSystemFont"/>
       </rectangle>
     </poster>
-    <Rectangle
-        id="rowItemMask"
-        color="0x000000"
-        opacity="0.8"
-        width="960"
-        height="540"/>
   </children>
 
 </component>
