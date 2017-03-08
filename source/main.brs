@@ -2,8 +2,6 @@ sub Main()
   port = CreateObject("roMessagePort")
   screen = CreateObject("roSGScreen")
   scene = screen.CreateScene("MainScene")
-
-
   screen.setMessagePort(port)
   screen.show()
 
