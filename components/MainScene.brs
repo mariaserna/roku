@@ -23,10 +23,11 @@ Sub SetCurrentVideo()
   videoContent.streamformat = "hls"
 
   if row <> invalid
-    item = row.getChild(itemFocused[1])
-  end if
-  if item <> invalid
-    videoContent.url = item.video
+      item = row.getChild(itemFocused[1])
+
+      if item <> invalid
+          videoContent.url = item.video
+      end if
   end if
 
   m.video.content = videoContent
@@ -35,7 +36,7 @@ End Sub
 
 Sub PlayCurrentVideo()
     m.video.control = "play"
-    m.video.visible = true
+    m.video.visible = true 
     m.video.setFocus(true)
 End Sub
 
