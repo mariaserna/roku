@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<component name="PlayButton" extends="Group" >
+  <script type="text/brightscript" uri="pkg:/components/PlayButton.brs"/>
+  <children>
+
+    <Poster
+      id="PauseButtonPoster"
+      uri="https://cdn3.iconfinder.com/data/icons/buttons/512/Icon_4-512.png"
+      width="50"
+      height="50" />
+    <Poster
+      id="PlayButtonPoster"
+      uri="http://www.freeiconspng.com/uploads/play-button-icon-png-0.png"
+      width="50"
+      height="50"
+      visible="false"/>
+  </children>
+
+</component>

@@ -4,6 +4,9 @@
   <interface>
     <field id="rowItemFocused" type="intarray" alwaysnotify="true" alias="myRowList.rowItemFocused"/>
     <field id="rowItemSelected" type="intarray" alwaysnotify="true" alias="myRowList.rowItemSelected"/>
+    <field id="state" type="string" onChange="stateHasChanged" alias="VideoItem.state"/>
+    <field id="position" type="time" onChange="positionHasChanged" alias="VideoItem.position"/>
+
   </interface>
 
   <script type="text/brightscript" uri="pkg:/components/MainScene.brs"/>
@@ -33,10 +36,12 @@
           focusXOffset="[230, 0]"
           drawFocusFeedback="true"
           rowFocusAnimationStyle="fixedFocusWrap"/>
-        <Video
+        <VideoPlayer
           id="VideoItem"
           width="1920"
           height="1080"
-          visible="false"/>
+          visible="false"
+          enableTrickPlay="false"/>
+
   </children>
 </component>

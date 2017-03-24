@@ -1,0 +1,13 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<component name="ForwardButton" extends="Group" >
+  <!--script type="text/brightscript" uri="pkg:/components/PlayButton.brs"/-->
+  <children>
+    <Poster
+      id="ForwardButtonPoster"
+      uri="http://a.dryicons.com/images/icon_sets/symbolize_icons_set/png/128x128/fast_forward.png"
+      width="50"
+      height="50"/>
+  </children>
+
+</component>

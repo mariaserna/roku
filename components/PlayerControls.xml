@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<component name="PlayerControls" extends="LayoutGroup" >
+  <!--script type="text/brightscript" uri="pkg:/components/PlayButton.brs"/-->
+  <children>
+    <label
+      id="currentTime"
+      text="0 s"
+      width="130"/>
+    <RewindButton />
+    <PlayButton />
+    <StopButton />
+    <ForwardButton />
+    <label
+      id="totalTime"
+      text="0 s"
+      width="130"/>
+  </children>
+
+</component>

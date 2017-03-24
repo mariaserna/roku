@@ -1,0 +1,10 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<component name="VideoPlayer" extends="Video">
+  <script type="text/brightscript" uri="pkg:/components/VideoPlayer.brs"/>
+  <children>
+    <PlayerControls
+      layoutDirection="horiz"
+      translation="[800, 1000]"/>
+  </children>
+</component>
