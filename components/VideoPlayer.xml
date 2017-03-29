@@ -4,7 +4,11 @@
   <script type="text/brightscript" uri="pkg:/components/VideoPlayer.brs"/>
   <children>
     <PlayerControls
+      itemSpacings="[10]"
+      color="0xffffff"
       layoutDirection="horiz"
       translation="[800, 1000]"/>
+    <Timer
+      id="timerItem"/>
   </children>
 </component>

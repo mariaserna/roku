@@ -5,7 +5,7 @@
   <children>
     <Poster
       id="RewindButtonPoster"
-      uri="http://icons.veryicon.com/256/System/Android%201/Media%20Controls%20rewind.png"
+      uri="pkg:/images/rewind.png"
       width="50"
       height="50"/>
   </children>

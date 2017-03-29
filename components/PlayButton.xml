@@ -6,12 +6,12 @@
 
     <Poster
       id="PauseButtonPoster"
-      uri="https://cdn3.iconfinder.com/data/icons/buttons/512/Icon_4-512.png"
+      uri="pkg:/images/pause.png"
       width="50"
-      height="50" />
+      height="50"/>
     <Poster
       id="PlayButtonPoster"
-      uri="http://www.freeiconspng.com/uploads/play-button-icon-png-0.png"
+      uri="pkg:/images/play.png"
       width="50"
       height="50"
       visible="false"/>

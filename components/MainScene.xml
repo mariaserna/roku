@@ -4,9 +4,6 @@
   <interface>
     <field id="rowItemFocused" type="intarray" alwaysnotify="true" alias="myRowList.rowItemFocused"/>
     <field id="rowItemSelected" type="intarray" alwaysnotify="true" alias="myRowList.rowItemSelected"/>
-    <field id="state" type="string" onChange="stateHasChanged" alias="VideoItem.state"/>
-    <field id="position" type="time" onChange="positionHasChanged" alias="VideoItem.position"/>
-
   </interface>
 
   <script type="text/brightscript" uri="pkg:/components/MainScene.brs"/>
