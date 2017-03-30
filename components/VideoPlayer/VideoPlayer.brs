@@ -76,7 +76,7 @@ Sub stateHasChanged()
       m.totalTime.text = formatTime(m.video.duration)
       else if m.video.state = "stopped"
       'restore total time when video stoped.
-      m.totalTime.text = "00:00:00"
+      m.totalTime.text = "0:0:0"
     end if
 
     if m.video.state = "paused"

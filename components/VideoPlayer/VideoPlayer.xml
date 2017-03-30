@@ -1,13 +1,13 @@
 <?xml version = "1.0" encoding = "utf-8" ?>
 
 <component name="VideoPlayer" extends="Video">
-  <script type="text/brightscript" uri="pkg:/components/VideoPlayer.brs"/>
+  <script type="text/brightscript" uri="pkg:/components/VideoPlayer/VideoPlayer.brs"/>
   <children>
     <ProgressBar translation="[660, 970]"/>
     <PlayerControls
       itemSpacings="[10]"
       layoutDirection="horiz"
-      translation="[660, 1000]"/>
+      translation="[860, 1000]"/>
     <Timer
       id="timerItem"/>
   </children>

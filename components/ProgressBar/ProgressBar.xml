@@ -15,5 +15,20 @@
         translation="[5,5]">
       </Rectangle>
     </Rectangle>
+    <label
+      color="0xffffff"
+      height="45"
+      id="currentTime"
+      text="0:0:0"
+      width="250"
+      font="font:SmallSystemFont"
+      translation="[0,30]"/>
+    <label
+      height="45"
+      color="0xffffff"
+      id="totalTime"
+      text="0:0:0"
+      font="font:SmallSystemFont"
+      translation="[500,30]"/>
   </children>
 </component>

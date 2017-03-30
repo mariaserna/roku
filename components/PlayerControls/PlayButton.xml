@@ -1,19 +1,17 @@
 <?xml version = "1.0" encoding = "utf-8" ?>
 
 <component name="PlayButton" extends="Group" >
-  <script type="text/brightscript" uri="pkg:/components/PlayButton.brs"/>
   <children>
-
     <Poster
       id="PauseButtonPoster"
       uri="pkg:/images/pause.png"
-      width="50"
-      height="50"/>
+      width="30"
+      height="30"/>
     <Poster
       id="PlayButtonPoster"
       uri="pkg:/images/play.png"
-      width="50"
-      height="50"
+      width="30"
+      height="30"
       visible="false"/>
   </children>
 

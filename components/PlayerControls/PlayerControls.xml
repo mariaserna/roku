@@ -1,13 +1,11 @@
 <?xml version = "1.0" encoding = "utf-8" ?>
 
-<component name="RewindButton" extends="Group" >
+<component name="PlayerControls" extends="LayoutGroup">
   <!--script type="text/brightscript" uri="pkg:/components/PlayButton.brs"/-->
   <children>
-    <Poster
-      id="RewindButtonPoster"
-      uri="pkg:/images/rewind.png"
-      width="50"
-      height="50"/>
+    <RewindButton/>
+    <PlayButton/>
+    <ForwardButton/>
   </children>
 
 </component>

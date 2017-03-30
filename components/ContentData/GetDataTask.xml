@@ -5,6 +5,6 @@
     <field id="responseContentNode" type="node"/>
   </interface>
 
-  <script type="text/brightscript" uri="pkg:/components/GetDataTask.brs"/>
+  <script type="text/brightscript" uri="pkg:/components/ContentData/GetDataTask.brs"/>
 
 </component>
