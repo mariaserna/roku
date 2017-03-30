@@ -9,6 +9,8 @@
       layoutDirection="horiz"
       translation="[800, 1000]"/>
     <Timer
-      id="timerItem"/>
+      id="timerForward"/>
+    <Timer
+      id="timerRewind"/>
   </children>
 </component>

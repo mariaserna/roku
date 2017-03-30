@@ -1,7 +1,10 @@
 Sub init()
   m.video = m.top
-  m.timer = m.top.findNode("timerItem")
-  m.timer.duration = 2
+  m.timerFd = m.top.findNode("timerForward")
+  m.timerRw = m.top.findNode("timerRewind")
+  'm.timer.duration = 1
+  m.timerFd.repeat = true
+  m.timerRw.repeat = true
 
   m.playButton = m.top.findNode("PauseButtonPoster")
   m.pauseButton = m.top.findNode("PlayButtonPoster")
@@ -21,24 +24,30 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
       pauseVideo()
       handled = true
     else if key = "fastforward"
-      m.timer.control = "start"
-      m.timer.repeat = "true"
+      m.timerFd.control = "start"
       m.videoPosition = m.video.position
-      m.timer.ObserveField("fire","forwardVideo")
-
+      forwardVideo()
+      m.timerFd.ObserveField("fire","forwardVideo")
       handled = true
     else if key = "rewind"
+      m.timerRw.control = "start"
+      m.videoPosition = m.video.position
       rewindVideo()
+      m.timerRw.ObserveField("fire","rewindVideo")
       handled = true
     end if
   end if
 
   if NOT press
     if key = "fastforward"
-      m.timer.control = "stop"
+      m.timerFd.control = "stop"
       m.forwardButton.opacity = "1"
+      handled = true
+    else if key = "rewind"
+      m.timerRw.control = "stop"
+      m.rewindButton.opacity = "1"
+      handled = true
     end if
-
   end if
   return handled
 end function
@@ -52,16 +61,15 @@ Sub pauseVideo()
 End Sub
 
 Sub forwardVideo()
-  m.videoPosition = m.videoPosition + 5
-  m.video.seek = m.videoPosition
   m.forwardButton.opacity = "0.4"
-  ?m.videoPosition
+  m.videoPosition = m.videoPosition + 10
+  m.video.seek = m.videoPosition
 End Sub
 
 Sub rewindVideo()
-  rewardedPosition = m.video.position - 10
-  m.video.seek = rewardedPosition
   m.rewindButton.opacity = "0.4"
+  m.videoPosition = m.videoPosition - 10
+  m.video.seek = m.videoPosition
 End Sub
 
 Sub stateHasChanged()
@@ -70,8 +78,6 @@ Sub stateHasChanged()
   if m.video.state = "playing"
     'set total time when video started playing
     m.totalTime.text = formatTime(m.video.duration)
-    'restore button opacity
-    m.rewindButton.opacity = "1"
 
   else if m.video.state = "stopped"
     'restore total time when video stoped.
