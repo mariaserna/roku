@@ -3,14 +3,12 @@
 <component name="VideoPlayer" extends="Video">
   <script type="text/brightscript" uri="pkg:/components/VideoPlayer.brs"/>
   <children>
+    <ProgressBar translation="[660, 970]"/>
     <PlayerControls
       itemSpacings="[10]"
-      color="0xffffff"
       layoutDirection="horiz"
-      translation="[800, 1000]"/>
+      translation="[660, 1000]"/>
     <Timer
-      id="timerForward"/>
-    <Timer
-      id="timerRewind"/>
+      id="timerItem"/>
   </children>
 </component>

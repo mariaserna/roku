@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<component name="ProgressBar" extends="Group" >
+  <children>
+    <Rectangle
+      id="progressBarWrapper"
+      width="600"
+      height="20"
+      color="0x0f0f0f">
+      <Rectangle
+        id="progressBarItem"
+        width="10"
+        height="10"
+        color="0xf0f0f0"
+        translation="[5,5]">
+      </Rectangle>
+    </Rectangle>
+  </children>
+</component>

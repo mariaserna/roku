@@ -3,7 +3,6 @@
 <component name="PlayerControls" extends="LayoutGroup">
   <!--script type="text/brightscript" uri="pkg:/components/PlayButton.brs"/-->
   <children>
-
     <RewindButton/>
     <PlayButton/>
     <ForwardButton/>
