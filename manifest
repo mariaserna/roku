@@ -1,0 +1,18 @@
+title=Roku Test
+major_version=1
+minor_version=0
+build_version=0
+
+mm_icon_focus_fhd=https://ratiointeractive.github.io/Roku-DeveloperDocs/channel-fhd.png
+mm_icon_focus_hd=https://ratiointeractive.github.io/Roku-DeveloperDocs/channel-hd.png
+mm_icon_focus_sd=https://ratiointeractive.github.io/Roku-DeveloperDocs/channel-sd.png
+
+splash_screen_fhd=https://ratiointeractive.github.io/Roku-DeveloperDocs/splash-fhd.png
+splash_screen_hd=https://ratiointeractive.github.io/Roku-DeveloperDocs/splash-hd.png
+splash_screen_sd=https://ratiointeractive.github.io/Roku-DeveloperDocs/splash-sd.png
+
+splash_color=#121212
+splash_min_time=0
+ui_resolutions=fhd
+
+rsg_version=1.0s
