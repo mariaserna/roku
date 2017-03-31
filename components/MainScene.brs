@@ -1,7 +1,7 @@
 Sub init()
   m.myrowlist = m.top.findNode("myRowList")
   m.video = m.top.findNode("VideoItem")
-  'Observe when a row item is focused and selected
+'Observe when a row item is focused and selected
   m.dataTask = createObject("RoSGNode", "GetDataTask")
   m.dataTask.functionName = "initTask"
   m.dataTask.control = "RUN"
@@ -36,7 +36,7 @@ End Sub
 
 Sub PlayCurrentVideo()
     m.video.control = "play"
-    m.video.visible = true 
+    m.video.visible = true
     m.video.setFocus(true)
 End Sub
 
@@ -44,12 +44,10 @@ End Sub
 function onKeyEvent(key as String, press as Boolean) as Boolean
   handled = false
   if press
-    if key = "back"
-      backToRowlist()
-      handled = true
-    else if key = "right"
-      handled = true
-    end if
+      if key = "back"
+        backToRowlist()
+        handled = true
+      end if
   end if
   return handled
 end function
@@ -58,4 +56,4 @@ Sub backToRowlist()
   m.video.visible = false
   m.myrowlist.setFocus(true)
   m.video.control = "stop"
-End Sub
+end Sub

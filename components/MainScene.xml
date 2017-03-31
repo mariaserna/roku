@@ -33,10 +33,12 @@
           focusXOffset="[230, 0]"
           drawFocusFeedback="true"
           rowFocusAnimationStyle="fixedFocusWrap"/>
-        <Video
+        <VideoPlayer
           id="VideoItem"
           width="1920"
           height="1080"
-          visible="false"/>
+          visible="false"
+          enableTrickPlay="false"/>
+
   </children>
 </component>

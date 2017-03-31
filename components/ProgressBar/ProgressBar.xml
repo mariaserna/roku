@@ -1,0 +1,34 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<component name="ProgressBar" extends="Group" >
+  <children>
+    <Rectangle
+      id="progressBarWrapper"
+      width="600"
+      height="20"
+      color="0x0f0f0f">
+      <Rectangle
+        id="progressBarItem"
+        width="10"
+        height="10"
+        color="0xf0f0f0"
+        translation="[5,5]">
+      </Rectangle>
+    </Rectangle>
+    <label
+      color="0xffffff"
+      height="45"
+      id="currentTime"
+      text="0:0:0"
+      width="250"
+      font="font:SmallSystemFont"
+      translation="[0,30]"/>
+    <label
+      height="45"
+      color="0xffffff"
+      id="totalTime"
+      text="0:0:0"
+      font="font:SmallSystemFont"
+      translation="[500,30]"/>
+  </children>
+</component>

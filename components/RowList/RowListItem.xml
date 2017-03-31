@@ -9,7 +9,7 @@
     <field id="rowIndex" type="integer"/>
   </interface>
 
-  <script type="text/brightscript" uri="pkg:/components/RowListItem.brs"/>
+  <script type="text/brightscript" uri="pkg:/components/RowList/RowListItem.brs"/>
 
   <children>
     <poster

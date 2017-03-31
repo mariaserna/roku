@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<component name="PlayButton" extends="Group" >
+  <children>
+    <Poster
+      id="PauseButtonPoster"
+      uri="pkg:/images/pause.png"
+      width="30"
+      height="30"/>
+    <Poster
+      id="PlayButtonPoster"
+      uri="pkg:/images/play.png"
+      width="30"
+      height="30"
+      visible="false"/>
+  </children>
+
+</component>
